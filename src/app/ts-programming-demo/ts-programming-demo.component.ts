@@ -94,7 +94,7 @@ console.log(`
     let octalVar: number = 0o744;
     //let [decimalVar, hexVar, binaryVar, octalVar] = [6, 0xf00d, 0b1010, 0o744]; //alt
     console.log(`
-       adding 1 to decimalVar: ${ decimalVar + 1 }
+       adding 1 to decimalVar: ${ decimalVar = decimalVar + 1 }
        multiply decimalVar by itself: ${ decimalVar * decimalVar } 
        //////////////////////////////////////// END: variables example: number ////////////////////////////////////////
     `);
@@ -259,39 +259,102 @@ console.log(emp.workHours);
 /* inheritance */
 
 interface IPerson{
-  id: number;
+   join(): boolean;
 }
 
 class Person implements IPerson{
-  id: number;
-  name: string;
-  join(){
 
+  private _id: number;
+  private _name: string;
+  private _created: string;
+
+  constructor(name: string){
+    this._name = name.toUpperCase();
+    this.join();
   }
+
+  get id(): number{
+    return this._id;
+  }
+  get name(): string{
+    return this._name;
+  }
+  get created(): string{
+    return this._created;
+  }
+
+  join(){
+    this._id = Math.floor(Math.random() * 100);
+    this._created = Date();
+    console.log("joined ..");
+    return this.id > 0;
+  }
+
 }
 
 class Employee extends Person{
+  constructor(name: string){
+    name = `+++${ name }+++`;
+    super(name);
+  }
+
   hireDate: string;
   manager: string;
 
   signIn(){
-    //record datetime.now in log
+    console.log("signed in ..");
   }
+
   signOut(){
-    //record datetime.now in log
+    console.log("signed out ..");
   }
 }
 
 class Employer extends Person{
+  constructor(name: string){
+    name = `---${ name }---`;
+    super(name);
+  }
+
   employeesCount: number;
 
   hire(employee: Employee){
     // reach array
+    console.log(employee.name + " hired !");
   }
+
   fire(employee: Employee){
     // reach array
+    console.log(employee.name + " fired !");
   }
 }
+
+let emp1 = new Employee("emp 1");
+console.log(`Employee 1 details: id = ${ emp1.id }, name = ${ emp1.name }, created = ${ emp1.created }`);
+
+/* arrays */
+
+let numberArray: number[];
+let stringArray: string[];
+let anyArray: any[];
+let objectsArray: Employee[];
+
+numberArray = [1, 2, 3, 4, 5];
+numberArray.push(6);
+numberArray.push(...[7, 8, 9, 10]);
+
+stringArray = ["a", "b", "c", "d", "e"];
+stringArray.push("f");
+stringArray.push(...["g", "h", "i", "j"]);
+
+anyArray = [1, "a", true, undefined];
+anyArray.push(null);
+anyArray.push(...[7, "b", 0, 10]);
+anyArray.push([true, false]);
+
+objectsArray = [emp1];
+objectsArray.push(new Employee("emp 2"));
+objectsArray.push(...[new Employee("emp 3"), new Employee("emp 4")]);
 
 
 // // creating class objects (Instantiation)
