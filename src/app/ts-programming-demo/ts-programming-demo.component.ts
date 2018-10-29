@@ -262,7 +262,7 @@ interface IPerson{
    join(): boolean;
 }
 
-class Person implements IPerson{
+abstract class Person implements IPerson{
 
   private _id: number;
   private _name: string;
@@ -355,6 +355,185 @@ anyArray.push([true, false]);
 objectsArray = [emp1];
 objectsArray.push(new Employee("emp 2"));
 objectsArray.push(...[new Employee("emp 3"), new Employee("emp 4")]);
+
+/* loops */ 
+
+// get items
+console.log("for(let item of stringArray)");
+for(let item of stringArray){
+  console.log(item);
+}
+
+// break / continue
+console.log("for(let item of stringArray) + break / continue");
+for(let item of stringArray){
+  if (item == "a")
+    continue;
+
+  if(item == "f")
+    break;
+
+  console.log("break-continue: " + item);
+}
+
+// get indexes
+console.log("for(let item in stringArray)");
+for(let item in stringArray){
+  console.log(`index: ${ item }, value: ${ stringArray[item] }`);
+}
+
+// ordinary for // var leak
+console.log("for(var _x = 0; _x < 10; _x++)");
+for(var _x = 0; _x < 10; _x++){
+  console.log(_x);
+}
+console.log(_x);
+
+// get all
+console.log("stringArray.forEach((value, index, array) => {});");
+stringArray.forEach((value, index, array) => {
+  console.log(value, index, array);
+});
+
+// infinite 
+// for(;;) { 
+//   console.log("This is an endless loop");
+// }
+
+// while
+console.log("while(dummy < 0)");
+let dummy = 0;
+while(dummy < 0){
+  console.log("while dummy value: " + dummy);
+  //dummy--;
+}
+
+// do while
+console.log("do {} while(dummy < 0)");
+dummy = 0;
+do{
+  console.log("do while dummy value: " + dummy);
+  //dummy--;
+}
+while(dummy < 0)
+
+
+
+
+
+/* condition / decision making */
+
+if(1){
+
+}
+else{
+
+}
+
+if(true) {}
+else if (true) {}
+else if (true) {}
+else {}
+
+
+enum Color{
+  Red,
+  Green,
+  Blue
+}
+
+let basicColor: Color;
+let extraColor: Color;
+
+// basic switch
+console.log("basic switch");
+switch(basicColor){
+
+  case undefined:
+  basicColor = Color.Red;
+  // break
+
+  case Color.Red:
+    console.log("red");
+    basicColor = Color.Green;
+  // break;
+  
+  case Color.Green:
+    console.log("green");
+    basicColor = Color.Blue;
+  // break;
+
+  case Color.Blue:
+    console.log("blue");
+  // break;
+
+  default:
+    console.log("white");
+    basicColor = undefined;
+  break;
+}
+
+// advanced switch
+
+console.log("advanced switch");
+switch(extraColor){
+  case Color.Red :
+    console.log("red");
+  //break;
+  
+  case Color.Green:
+    console.log("green");
+  break;
+
+  case Color.Blue:
+    console.log("blue");
+  break;
+
+  default:
+    console.log("white");
+  break;
+}
+
+// Mixing red + blue = magenta.
+// Mixing blue + green = cyan.
+// Mixing green + red = yellow.
+
+
+let month = 2;
+let year = 2000;
+let numDays = 0;
+
+  switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+          numDays = 31;
+          break;
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+          numDays = 30;
+          break;
+      case 2:
+          if (((year % 4 == 0) && 
+                !(year % 100 == 0))
+                || (year % 400 == 0))
+              numDays = 29;
+          else
+              numDays = 28;
+          break;
+      default:
+          console.log("invalid month");
+      break;
+  }
+  console.log("number of days is: " + numDays);
+
+
 
 
 // // creating class objects (Instantiation)
