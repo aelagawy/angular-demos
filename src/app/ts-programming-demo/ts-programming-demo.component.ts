@@ -28,7 +28,7 @@ console.log(`
 `);
 
 /* variables examples */
-
+// variables order to call matters !!
   /* boolean --start */
 
     console.log("@variables example: boolean");
@@ -39,6 +39,7 @@ console.log(`
        booleanVar value = ${ booleanVar }
        reverse of booleanVar = ${ !booleanVar }
        boolean examples:
+       booleanVar.toString() ${ booleanVar.toString() }
        1 == 1 should return true. evaluated: ${ 1 == 1 }
        'test' == 'test' should return true. evaluated: ${ 'test' == 'test' }
        'test' == 'TEST' should return false. evaluated: ${ 'test' == 'test'.toUpperCase() }
@@ -80,9 +81,27 @@ console.log(`
        // return string in lowercase | syntax: stringVar1.toLowerCase() | value: ${ stringVar1.toLowerCase() }
        // return string in uppercase | syntax: stringVar1.toUpperCase() | value: ${ stringVar1.toUpperCase() }
        // removes spaces from left and right string | syntax: stringVar1.trim() | value: ${ stringVar1.trim() }
+       // stringVar1.charAt(5); ${ stringVar1.charAt(5) }
+       // stringVar1.charCodeAt(5); ${ stringVar1.charCodeAt(5) }
+       // stringVar1.codePointAt(5); ${ stringVar1.codePointAt(5) }
+       // stringVar1.concat('+'); ${ stringVar1.concat('+') }
+       // stringVar1.lastIndexOf('r'); ${ stringVar1.lastIndexOf('r') }
+       // stringVar1.localeCompare("   Angular.ng   "); ${ stringVar1.localeCompare("   Angular.ng   ") }
+       // stringVar1.match("regex"); ${ stringVar1.match("regex") }
+       // stringVar1.padEnd(100, "_"); ${ stringVar1.padEnd(100, "_") }
+       // stringVar1.padStart(100, "_"); ${ stringVar1.padStart(100, "_") }
+       // stringVar1.replace("a", "A"); ${ stringVar1.replace("a", "A") }
+       // stringVar1.search("ng"); ${ stringVar1.search("ng") }
+       // "aelagawy@gmail.com".search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/); ${ "aelagawy@gmail.com".search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) }
+       // stringVar1.substr(5, 10); // from 5 with length of 10 ${  stringVar1.substr(5, 10) }
+       
        //////////////////////////////////////// END: variables example: string ////////////////////////////////////////
     `);
- 
+    // funcions explain overloading / return types / required parameters / default values
+
+
+
+    //stringVar1. 
   /* string --end */  
 
   /* number --start */  
@@ -92,14 +111,44 @@ console.log(`
     let hexVar: number = 0xf00d;
     let binaryVar: number = 0b1010;
     let octalVar: number = 0o744;
+
+
     //let [decimalVar, hexVar, binaryVar, octalVar] = [6, 0xf00d, 0b1010, 0o744]; //alt
     console.log(`
        adding 1 to decimalVar: ${ decimalVar = decimalVar + 1 }
        multiply decimalVar by itself: ${ decimalVar * decimalVar } 
+       decimalVar.toPrecision(3) ${ decimalVar.toPrecision(3) }
+       decimalVar.toFixed(2); ${ decimalVar.toFixed(2) }
+       decimalVar.toString(); ${ decimalVar.toString() }
+       decimalVar.toExponential() ${ decimalVar.toExponential() }
        //////////////////////////////////////// END: variables example: number ////////////////////////////////////////
     `);
 
   /* number --end */  
+
+  /* data types: extras */
+  /* mixed type */
+  let booleanAndStringVar: boolean | string;
+  booleanAndStringVar = "string value";
+  console.log(`booleanAndStringVar = "string value"; booleanAndStringVar value: ${ booleanAndStringVar } and it's datatype is: ${ typeof booleanAndStringVar }`);
+  booleanAndStringVar = true;
+  console.log(`booleanAndStringVar = true; booleanAndStringVar value: ${ booleanAndStringVar } and it's datatype is: ${ typeof booleanAndStringVar }`);
+
+/* any */
+let anyVar: any = undefined || false || "string";
+console.log("voidVar value: " + anyVar);
+
+/* void */
+let voidVar: void;
+console.log("voidVar value: " + voidVar);
+
+/* undefined */
+let undefinedVar: undefined = undefined;
+console.log("undefinedVar value: " + undefinedVar);
+
+/* null */
+let nullVar:null = null;
+console.log("nullVar value: " + nullVar);
 
 /* operators */
 
@@ -121,6 +170,28 @@ console.log(`(operators) a value: ${ a }, b value: ${ b } \n`);
       7. Decrement '--', expression: b--, value: ${ b-- }
     //////////////////////////////////////// END: operators: Arithmetic operators ////////////////////////////////////////
   `); 
+
+  console.log("@built-in functions: Arithmetic 'Math'");
+  console.log(`
+  /* MATH */
+    Math.abs(-123) ${ Math.abs(-123) }
+    Math.ceil(99.1) ${ Math.ceil(99.1) }
+    Math.floor(99.9) ${ Math.floor(99.9) }
+    Math.fround(99.9) ${ Math.fround(99.9) }
+    Math.log(10)  ${ Math.log(10) }
+    Math.log10(100) ${ Math.log10(100) }
+    Math.max(99,100,1000) ${ Math.max(99,100,1000) } 
+    Math.min(99,100,1000) ${ Math.min(99,100,1000) } 
+    Math.PI  ${ Math.PI }
+    Math.E ${ Math.E }
+    Math.pow(5,2)  ${ Math.pow(5,2) }
+    Math.random() ${ Math.random() }
+    Math.round(1.6)  ${ Math.round(1.6) }
+    Math.sign(0)  ${ Math.sign(0) }
+    Math.sign(-465184)  ${ Math.sign(-465184) }
+    Math.sqrt(9)  ${ Math.sqrt(9) }
+    Math.trunc(1.5)  ${ Math.trunc(1.5) }
+  `);
 
   /* Relational operators */
   console.log("@operators: Relational operators");
@@ -196,11 +267,9 @@ console.log(`(operators) a value: ${ a }, b value: ${ b } \n`);
   `);
 
 
+/* extra operators : . , ? */ 
 
-  /*functions*/
-
-/* Advanced / User-Defined data types */
-/* classes */
+/* user-defined data types: classes */
 
 /* basic class structure */
 class Basic{
@@ -213,7 +282,7 @@ class Complex{
   private _id: number;
   
   constructor(private fName:string, private lName?:string){
-    this._id = Math.random();
+    this._id = Math.trunc(Math.random() * 100);
   }
   get id(){
     return this._id;
@@ -254,83 +323,82 @@ console.log(emp.workHours);
 emp.work(10);
 console.log(emp.workHours);
 
-
-
 /* inheritance */
 
 interface IPerson{
-   join(): boolean;
+  join(): void;
 }
 
 abstract class Person implements IPerson{
 
-  private _id: number;
-  private _name: string;
-  private _created: string;
+ private _id: number;
+ private _name: string;
+ private _created: string;
 
-  constructor(name: string){
-    this._name = name.toUpperCase();
-    this.join();
-  }
+ constructor(name: string){
+   this._name = name.toUpperCase();
+   this.join();
+ }
 
-  get id(): number{
-    return this._id;
-  }
-  get name(): string{
-    return this._name;
-  }
-  get created(): string{
-    return this._created;
-  }
+ get id(): number{
+   return this._id;
+ }
+ get name(): string{
+   return this._name;
+ }
+ get created(): string{
+   return this._created;
+ }
 
-  join(){
-    this._id = Math.floor(Math.random() * 100);
-    this._created = Date();
-    console.log("joined ..");
-    return this.id > 0;
-  }
+ join(): void{
+   this._id = Math.trunc(Math.random() * 100);
+   this._created = Date();
+   console.log("joined ..");
+ }
 
 }
 
 class Employee extends Person{
-  constructor(name: string){
-    name = `+++${ name }+++`;
-    super(name);
-  }
+ constructor(name: string){
+   name = `+++${ name }+++`;
+   super(name);
+ }
 
-  hireDate: string;
-  manager: string;
+ hireDate: string;
+ manager: string;
 
-  signIn(){
-    console.log("signed in ..");
-  }
+ signIn(){
+   console.log("signed in ..");
+ }
 
-  signOut(){
-    console.log("signed out ..");
-  }
+ signOut(){
+   console.log("signed out ..");
+ }
 }
 
 class Employer extends Person{
-  constructor(name: string){
-    name = `---${ name }---`;
-    super(name);
-  }
+ constructor(name: string){
+   name = `---${ name }---`;
+   super(name);
+ }
 
-  employeesCount: number;
+ employeesCount: number;
 
-  hire(employee: Employee){
-    // reach array
-    console.log(employee.name + " hired !");
-  }
+ hire(employee: Employee){
+   // reach array
+   console.log(employee.name + " hired !");
+ }
 
-  fire(employee: Employee){
-    // reach array
-    console.log(employee.name + " fired !");
-  }
+ fire(employee: Employee){
+   // reach array
+   console.log(employee.name + " fired !");
+ }
 }
 
 let emp1 = new Employee("emp 1");
 console.log(`Employee 1 details: id = ${ emp1.id }, name = ${ emp1.name }, created = ${ emp1.created }`);
+
+
 
 /* arrays */
 
@@ -342,6 +410,12 @@ let objectsArray: Employee[];
 numberArray = [1, 2, 3, 4, 5];
 numberArray.push(6);
 numberArray.push(...[7, 8, 9, 10]);
+
+/* e m */
+let dummyArray = [100, 200, 300];
+numberArray = numberArray.concat(dummyArray);
+
+console.log('arr', numberArray);
 
 stringArray = ["a", "b", "c", "d", "e"];
 stringArray.push("f");
@@ -355,6 +429,26 @@ anyArray.push([true, false]);
 objectsArray = [emp1];
 objectsArray.push(new Employee("emp 2"));
 objectsArray.push(...[new Employee("emp 3"), new Employee("emp 4")]);
+
+
+/* to do */
+/*
+  1- functions / methods
+  2- ? nullable properties
+  3- datatypes |  typeof
+  4- check for value ||
+  5- arrays extension methods .push() , .slice() ,... 
+  6- advanced mathematical operations ( build up calculator demo )
+*/
+
+  /* functions - methods */
+
+/* Advanced / User-Defined data types */
+/* classes */
+
+
+
+
 
 /* loops */ 
 
