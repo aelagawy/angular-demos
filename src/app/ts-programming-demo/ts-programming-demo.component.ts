@@ -414,8 +414,23 @@ numberArray.push(...[7, 8, 9, 10]);
 /* e m */
 let dummyArray = [100, 200, 300];
 numberArray = numberArray.concat(dummyArray);
+console.log(numberArray.entries()); // key value pairs
+console.log(numberArray.every(n => n > 0)); // return true / false
+numberArray.fill(7, 3, 5) // fill array with value 7 between index 3 and 5
+numberArray.copyWithin(5, 5) //
+numberArray.filter(n => n > 5); // returns array
+numberArray.find(n => n == 1) // return first value otherwise undefined
+numberArray.findIndex(n => n == 1 ) // return first value's index otherwise -1
 
-console.log('arr', numberArray);
+numberArray.includes(5) // return true or false 
+numberArray.indexOf(4) // return index of value otherwise -1
+numberArray.join("-") // joins the array into string with selected seperator
+numberArray.lastIndexOf(4) // lastindexof otherwise -1
+numberArray.forEach(n => { console.log(n); })
+numberArray.length
+numberArray.map(n => { return n + 100 }) // map members to function and return new array
+numberArray.pop() // remove last item and return it
+//numberArray.reduce()
 
 stringArray = ["a", "b", "c", "d", "e"];
 stringArray.push("f");
