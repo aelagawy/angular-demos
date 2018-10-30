@@ -29,3 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 include angular material design https://material.angular.io/guide/getting-started
 todo: include git commands ..
+
+Debugging the application 
+https://code.visualstudio.com/docs/nodejs/angular-tutorial#_debugging-angular
+
+Install google chrome extension for vs code https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome
