@@ -544,7 +544,7 @@ else if (true) {}
 else if (true) {}
 else {}
 
-
+// enums
 enum Color{
   Red,
   Green,
@@ -698,9 +698,11 @@ let numDays = 0;
 // enum Color {Red, Green, Blue}
 // let cc: Color = Color.Green;
 
-// function isNumber(x: any): x is number {
-//   return typeof x === "number";
-// }
+function isNumber(x: any): x is number {
+  return typeof x === "number";
+}
+
+console.log("isNumber: " + isNumber("d"));
 
 // function isString(x: any): x is string {
 //   return typeof x === "string";
