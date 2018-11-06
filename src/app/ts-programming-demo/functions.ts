@@ -31,8 +31,8 @@ namespace Functions.OptionalAndDefaultParameters {
         return firstName + " " + lastName;
     }
     
-    let result1a = buildName1("Bob");                  // error, too few parameters
-    let result2a = buildName1("Bob", "Adams", "Sr.");  // error, too many parameters
+    //let result1a = buildName1("Bob");                  // error, too few parameters
+    //let result2a = buildName1("Bob", "Adams", "Sr.");  // error, too many parameters
     let result3a = buildName1("Bob", "Adams");         // ah, just right
 
     // example: 2
@@ -44,7 +44,7 @@ namespace Functions.OptionalAndDefaultParameters {
     }
     
     let result1b = buildName2("Bob");                  // works correctly now
-    let result2b = buildName2("Bob", "Adams", "Sr.");  // error, too many parameters
+    //let result2b = buildName2("Bob", "Adams", "Sr.");  // error, too many parameters
     let result3b = buildName2("Bob", "Adams");         // ah, just right
 
     // example: 3
@@ -56,7 +56,7 @@ namespace Functions.OptionalAndDefaultParameters {
     }
     
     let result1c = buildName3("Bob");                  // works correctly now
-    let result2c = buildName3("Bob", "Adams", "Sr.");  // error, too many parameters
+    //let result2c = buildName3("Bob", "Adams", "Sr.");  // error, too many parameters
     let result3c = buildName3("Bob", "Adams");         // ah, just right
 }
 

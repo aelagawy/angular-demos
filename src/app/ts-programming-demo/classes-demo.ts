@@ -85,7 +85,7 @@ namespace AccessModifiers.Private {
         constructor(theName: string) { this.name = theName; }
     }
     
-    new Animal1("Cat").name; // Error: 'name' is private;
+    //new Animal1("Cat").name; // Error: 'name' is private;
 
     // advanced example
     class Animal2 {
@@ -107,7 +107,7 @@ namespace AccessModifiers.Private {
     let employee = new Employee("Bob");
     
     animal = rhino;
-    animal = employee; // Error: 'Animal' and 'Employee' are not compatible
+    //animal = employee; // Error: 'Animal' and 'Employee' are not compatible
 }
 
 namespace AccessModifiers.Protected {
@@ -132,7 +132,7 @@ namespace AccessModifiers.Protected {
     
     let mark = new Employee1("Mark", "Sales");
     console.log(mark.getElevatorPitch());
-    console.log(mark.name); // error
+    //console.log(mark.name); // error
 
 
     class Person2 {
@@ -155,7 +155,7 @@ namespace AccessModifiers.Protected {
     }
     
     let howard = new Employee("Howard", "Sales");
-    let john = new Person2("John"); // Error: The 'Person' constructor is protected
+    //let john = new Person2("John"); // Error: The 'Person' constructor is protected
 }
 
 namespace AccessModifiers.ReadOnly {
@@ -168,7 +168,7 @@ namespace AccessModifiers.ReadOnly {
         }
     }
     let dad = new Octopus1("Man with the 8 strong legs");
-    dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+    //dad.name = "Man with the 3-piece suit"; // error! name is readonly.
 
     // example: 2
     class Octopus2 {
@@ -271,11 +271,11 @@ namespace Classes.Abstract {
     }
     
     let department: Department; // ok to create a reference to an abstract type
-    department = new Department(); // error: cannot create an instance of an abstract class
+    //department = new Department(); // error: cannot create an instance of an abstract class
     department = new AccountingDepartment(); // ok to create and assign a non-abstract subclass
     department.printName();
     department.printMeeting();
-    department.generateReports(); // error: method doesn't exist on declared abstract type
+    //department.generateReports(); // error: method doesn't exist on declared abstract type
 }
 
 namespace Classes.ConstructorInit {
