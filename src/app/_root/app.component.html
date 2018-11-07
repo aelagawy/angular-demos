@@ -1,0 +1,57 @@
+<!-- 
+<router-outlet></router-outlet>
+
+<app-material-design-demo></app-material-design-demo> -->
+
+<mat-toolbar color="primary">
+   
+  <mat-toolbar-row>
+      <button class="hamburger mat-button" mat-button (click)="sidenav.toggle()" title="Docs menu" >
+      <span class="mat-button-wrapper">
+        <mat-icon class="mat-icon" role="img" svgicon="menu" aria-hidden="true">
+          <svg focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+            </path>
+          </svg>
+        </mat-icon>
+      </span>
+      <div class="mat-button-ripple mat-ripple" matripple=""></div>
+      <div class="mat-button-focus-overlay"></div>
+      </button>
+    <span>Angular Demos</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+  
+    <span>by Ahmad El-Agawy</span>
+    <a class="docs-button docs-navbar-hide-small mat-button" href="https://github.com/aelagawy/angular-demos" mat-button target="_blank">
+      <span class="mat-button-wrapper">
+        <img _ngcontent-c1="" alt="angular" class="docs-angular-logo" src="https://material.angular.io/assets/img/homepage/github-circle-white-transparent.svg"> GitHub </span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="push" class="col-2">
+      <mat-list>
+          <a mat-list-item href="#">Pepper</a>
+          <a mat-list-item href="#">Pepper</a>
+          <a mat-list-item href="#">Pepper</a>
+         </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+      <div class="jumbotron">
+          <h1 class="display-4">Hello, world!</h1>
+          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<router-outlet></router-outlet>
