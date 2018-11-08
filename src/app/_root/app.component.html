@@ -6,7 +6,7 @@
 <mat-toolbar color="primary">
    
   <mat-toolbar-row>
-      <button class="hamburger mat-button" mat-button (click)="sidenav.toggle()" title="Docs menu" >
+      <!-- <button class="hamburger mat-button" mat-button (click)="sidenav.toggle()" title="Docs menu" >
       <span class="mat-button-wrapper">
         <mat-icon class="mat-icon" role="img" svgicon="menu" aria-hidden="true">
           <svg focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@
       </span>
       <div class="mat-button-ripple mat-ripple" matripple=""></div>
       <div class="mat-button-focus-overlay"></div>
-      </button>
+      </button> -->
     <span>Angular Demos</span>
   
     <!-- This fills the remaining space of the current row -->
@@ -33,25 +33,51 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-sidenav-container class="example-container">
+<!-- <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="push" class="col-2">
       <mat-list>
-          <a mat-list-item href="#">Pepper</a>
-          <a mat-list-item href="#">Pepper</a>
-          <a mat-list-item href="#">Pepper</a>
-         </mat-list>
+          <a mat-list-item routerLink="/ng/click-me">Click Me !</a>
+          <a mat-list-item routerLink="/ng/key-up-1">Key Up 1</a>
+          <a mat-list-item routerLink="/ng/key-up-2">Key Up 2</a>
+          <a mat-list-item routerLink="/ng/key-up-3">Key Up 3</a>
+          <a mat-list-item routerLink="/ng/key-up-4">Key Up 4</a>
+          <a mat-list-item routerLink="/ng/little-tour">Little Tour</a>
+          <a mat-list-item routerLink="/ng/loop-back">loop-back</a>
+      </mat-list>
   </mat-sidenav>
 
+
   <mat-sidenav-content>
-      <div class="jumbotron">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </div>
+          <router-outlet></router-outlet>
+
   </mat-sidenav-content>
-</mat-sidenav-container>
+
+</mat-sidenav-container> -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 col">
+      <ul>
+          <li><a routerLink="/ng/click-me">Click Me !</a></li>
+          <li><a routerLink="/ng/key-up-1">Key Up 1</a></li>
+          <li><a routerLink="/ng/key-up-2">Key Up 2</a></li>
+          <li><a routerLink="/ng/key-up-3">Key Up 3</a></li>
+          <li><a routerLink="/ng/key-up-4">Key Up 4</a></li>
+          <li><a routerLink="/ng/little-tour">Little Tour</a></li>
+          <li><a routerLink="/ng/loop-back">loop-back</a></li>
+        </ul>          
+    </div>
+    <div class="col-8 col">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<router-outlet></router-outlet>
+
+
+
+
+
+

@@ -1,3 +1,13 @@
+import { NgComponent } from './ng/ng.component';
+import { LoopbackComponent } from './ng/little-tour.component';
+import { LittleTourComponent } from './ng/loop-back.component';
+import { 
+  KeyUpComponent_v1, 
+  KeyUpComponent_v2, 
+  KeyUpComponent_v3, 
+  KeyUpComponent_v4 
+} from './ng/key-up.component';
+import { ClickMeComponent } from './ng/click-me.component';
 import { NgModule }                   from '@angular/core';
 import { RouterModule, Routes }       from '@angular/router';
 
@@ -15,7 +25,17 @@ const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes', component: HeroesComponent }]}
+    { path: 'heroes', component: HeroesComponent }
+  ]},
+  { path: 'ng', component: NgComponent ,children: [
+    { path: 'click-me', component: ClickMeComponent },
+    { path: 'key-up-1', component: KeyUpComponent_v1 },
+    { path: 'key-up-2', component: KeyUpComponent_v2 },
+    { path: 'key-up-3', component: KeyUpComponent_v3 },
+    { path: 'key-up-4', component: KeyUpComponent_v4 },
+    { path: 'little-tour', component: LittleTourComponent },
+    { path: 'loop-back', component: LoopbackComponent },
+  ]}
 ];
  
 @NgModule({
