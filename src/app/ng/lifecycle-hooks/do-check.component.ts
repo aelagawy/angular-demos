@@ -1,5 +1,6 @@
 /* tslint:disable:forin */
-import { Component, DoCheck, Input, ViewChild } from '@angular/core';
+import { Component, DoCheck, Input, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 class Hero {
   constructor(public name: string) {}
@@ -8,6 +9,8 @@ class Hero {
 @Component({
   selector: 'do-check',
   template: `
+  <div #parentContainer></div>
+  <br>
   <div class="hero">
     <p>{{hero.name}} can {{power}}</p>
 
@@ -67,23 +70,43 @@ export class DoCheckComponent implements DoCheck {
     this.changeDetected = true;
     this.changeLog = [];
   }
+
+
+//   @ViewChild('parentContainer', { read: ViewContainerRef }) parentContainer: ViewContainerRef;
+//  constructor(private route: ActivatedRoute,
+//   private _componentFactoryResolver: ComponentFactoryResolver){
+
+// }
+
+//   ngOnInit(){
+//     this.route.data
+//         .subscribe(data => {
+//            if(!!data && !!data.parent){
+//              data.parent.map(p => {
+//                let componentFactory = this._componentFactoryResolver.resolveComponentFactory(p);
+//                console.log(componentFactory)
+//                this.parentContainer.createComponent(componentFactory);
+//              });
+//            }
+//         });
+//   }
 }
 
 @Component({
   selector: 'do-check-parent',
-  template: `
-    <div class="parent">
-    <h2>{{title}}</h2>
+  template:`
+  <div class="parent">
+  <h2>{{title}}</h2>
 
-    <table>
-      <tr><td>Power: </td><td><input [(ngModel)]="power"></td></tr>
-      <tr><td>Hero.name: </td><td><input [(ngModel)]="hero.name"></td></tr>
-    </table>
-    <p><button (click)="reset()">Reset Log</button></p>
+  <table>
+    <tr><td>Power: </td><td><input [(ngModel)]="power"></td></tr>
+    <tr><td>Hero.name: </td><td><input [(ngModel)]="hero.name"></td></tr>
+  </table>
+  <p><button (click)="reset()">Reset Log</button></p>
 
-    <do-check [hero]="hero" [power]="power"></do-check>
-  </div>
-`,
+  <do-check [hero]="hero" [power]="power"></do-check>
+</div>
+  ` ,
   styles: ['.parent {background: Lavender}']
 })
 export class DoCheckParentComponent {

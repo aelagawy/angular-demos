@@ -35,6 +35,15 @@ import {
   import { LoopbackComponent } from './ng/little-tour.component';
   import { LittleTourComponent } from './ng/loop-back.component';
   import { NgComponent } from './ng/ng.component';
+import { LifeCycleHooksComponent } from './ng/lifecycle-hooks/lifecycle-hooks.component';
+import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
+import { DoCheckComponent, DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
+import { OnChangesComponent, OnChangesParentComponent } from './ng/lifecycle-hooks/on-changes.component';
+import { AfterViewComponent, AfterViewParentComponent, ChildViewComponent } from './ng/lifecycle-hooks/after-view.component';
+import { AfterContentComponent, AfterContentParentComponent, ChildComponent } from './ng/lifecycle-hooks/after-content.component';
+import { SpyParentComponent } from './ng/lifecycle-hooks/spy.component';
+import { CounterParentComponent, MyCounterComponent } from './ng/lifecycle-hooks/counter.component';
+//import { PeekABooParentComponent } from './ng/lifecycle-hooks/on-changes.component';
   
   @NgModule({
   declarations: [
@@ -54,7 +63,23 @@ import {
     KeyUpComponent_v4,
     LittleTourComponent,
     LoopbackComponent,
-    NgComponent
+    NgComponent,
+    LifeCycleHooksComponent,
+    PeekABooComponent,
+    DoCheckComponent,
+    DoCheckParentComponent,
+    OnChangesComponent,
+    OnChangesParentComponent,
+    AfterViewComponent,
+    AfterViewParentComponent,
+    ChildViewComponent,
+    AfterContentComponent,
+    AfterContentParentComponent,
+    ChildComponent,
+    SpyParentComponent,
+    CounterParentComponent,
+    MyCounterComponent
+    //PeekABooParentComponent
   ],
   imports: [
     BrowserModule,

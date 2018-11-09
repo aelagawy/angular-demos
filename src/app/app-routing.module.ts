@@ -16,6 +16,14 @@ import { TourOfHeroesDemoComponent }  from './tour-of-heroes/tour-of-heroes-demo
 import { DashboardComponent }         from './tour-of-heroes/dashboard/dashboard.component';
 import { HeroesComponent }            from './tour-of-heroes/heroes/heroes.component';
 import { HeroDetailComponent }        from './tour-of-heroes/hero-detail/hero-detail.component';
+import { LifeCycleHooksComponent }    from './ng/lifecycle-hooks/lifecycle-hooks.component';
+import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
+import { DoCheckComponent, DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
+import { AfterViewParentComponent } from './ng/lifecycle-hooks/after-view.component';
+import { OnChangesParentComponent } from './ng/lifecycle-hooks/on-changes.component';
+import { AfterContentParentComponent } from './ng/lifecycle-hooks/after-content.component';
+import { SpyParentComponent } from './ng/lifecycle-hooks/spy.component';
+import { CounterParentComponent } from './ng/lifecycle-hooks/counter.component';
  
 const routes: Routes = [
   //{ path: '', redirectTo: '/ts-programming-demo', pathMatch: 'full' },
@@ -35,6 +43,16 @@ const routes: Routes = [
     { path: 'key-up-4', component: KeyUpComponent_v4 },
     { path: 'little-tour', component: LittleTourComponent },
     { path: 'loop-back', component: LoopbackComponent },
+    { path: 'lifecycle-hooks', component: LifeCycleHooksComponent, children: [
+      { path: 'peek-a-boo', component: PeekABooComponent },
+      { path: 'do-check', component: DoCheckParentComponent },
+      { path: 'on-changes', component: OnChangesParentComponent },
+      { path: 'after-view', component: AfterViewParentComponent },
+      { path: 'after-content', component: AfterContentParentComponent },
+      { path: 'spy', component: SpyParentComponent },
+      { path: 'counter', component: CounterParentComponent },
+      // { path: 'peek-a-boo', component: PeekABooComponent },
+    ]}
   ]}
 ];
  
@@ -43,3 +61,5 @@ const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
+
+///ng//do-check
