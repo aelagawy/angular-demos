@@ -9,7 +9,7 @@ import {
   MatSidenavModule, 
   MatToolbarModule,
   MatIconModule,
-  MatListModule }                               from '@angular/material';
+  MatListModule }                                 from '@angular/material';
   import { MatMenuModule }                        from '@angular/material/menu';
   import { MatTabsModule }                        from '@angular/material/tabs';
   
@@ -35,7 +35,7 @@ import {
   import { LoopbackComponent } from './ng/little-tour.component';
   import { LittleTourComponent } from './ng/loop-back.component';
   import { NgComponent } from './ng/ng.component';
-import { LifeCycleHooksComponent } from './ng/lifecycle-hooks/lifecycle-hooks.component';
+import { LifeCycleHooksComponent } from './ng/lifecycle-hooks/_lifecycle-hooks.component';
 import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
 import { DoCheckComponent, DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
 import { OnChangesComponent, OnChangesParentComponent } from './ng/lifecycle-hooks/on-changes.component';
@@ -43,7 +43,18 @@ import { AfterViewComponent, AfterViewParentComponent, ChildViewComponent } from
 import { AfterContentComponent, AfterContentParentComponent, ChildComponent } from './ng/lifecycle-hooks/after-content.component';
 import { SpyParentComponent } from './ng/lifecycle-hooks/spy.component';
 import { CounterParentComponent, MyCounterComponent } from './ng/lifecycle-hooks/counter.component';
-//import { PeekABooParentComponent } from './ng/lifecycle-hooks/on-changes.component';
+import { MissionControlComponent, AstronautComponent } from './ng/component-interaction/mission.component';
+import { CountdownLocalVarParentComponent, CountdownViewChildParentComponent } from './ng/component-interaction/countdown.component';
+import { CountdownTimerComponent } from './ng/component-interaction/countdown-timer.component';
+import { HeroParentComponent, HeroChildComponent } from './ng/component-interaction/hero.component';
+import { NameParentComponent, NameChildComponent } from './ng/component-interaction/name.component';
+import { VersionParentComponent, VersionChildComponent } from './ng/component-interaction/version.component';
+import { VoteTakerComponent, VoterComponent } from './ng/component-interaction/vote.component';
+import { ComponentInteractionComponent } from './ng/component-interaction/_component-interaction.component';
+import { PopupComponent, PopupParentComponent } from './ng/pop-up/popup.component';
+import { AdBannerComponent, AdBannerParentComponent } from './ng/ads/ad-banner.component';
+import { HeroProfileComponent } from './ng/ads/hero-profile.component';
+import { HeroJobAdComponent } from './ng/ads/hero-job-ad.component';
   
   @NgModule({
   declarations: [
@@ -78,8 +89,24 @@ import { CounterParentComponent, MyCounterComponent } from './ng/lifecycle-hooks
     ChildComponent,
     SpyParentComponent,
     CounterParentComponent,
-    MyCounterComponent
-    //PeekABooParentComponent
+    MyCounterComponent, 
+    ComponentInteractionComponent,
+    MissionControlComponent, AstronautComponent, 
+    CountdownLocalVarParentComponent, CountdownViewChildParentComponent,
+    CountdownTimerComponent,
+    HeroParentComponent, HeroChildComponent,
+    NameParentComponent, NameChildComponent,
+    VersionParentComponent, VersionChildComponent,
+    VoteTakerComponent, VoterComponent,
+    PopupComponent, PopupParentComponent,
+    AdBannerParentComponent, AdBannerComponent,
+    HeroProfileComponent,
+    HeroJobAdComponent
+  ],
+  entryComponents:[
+    PopupComponent,
+    HeroProfileComponent,
+    HeroJobAdComponent
   ],
   imports: [
     BrowserModule,

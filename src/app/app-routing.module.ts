@@ -16,7 +16,7 @@ import { TourOfHeroesDemoComponent }  from './tour-of-heroes/tour-of-heroes-demo
 import { DashboardComponent }         from './tour-of-heroes/dashboard/dashboard.component';
 import { HeroesComponent }            from './tour-of-heroes/heroes/heroes.component';
 import { HeroDetailComponent }        from './tour-of-heroes/hero-detail/hero-detail.component';
-import { LifeCycleHooksComponent }    from './ng/lifecycle-hooks/lifecycle-hooks.component';
+import { LifeCycleHooksComponent }    from './ng/lifecycle-hooks/_lifecycle-hooks.component';
 import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
 import { DoCheckComponent, DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
 import { AfterViewParentComponent } from './ng/lifecycle-hooks/after-view.component';
@@ -24,6 +24,15 @@ import { OnChangesParentComponent } from './ng/lifecycle-hooks/on-changes.compon
 import { AfterContentParentComponent } from './ng/lifecycle-hooks/after-content.component';
 import { SpyParentComponent } from './ng/lifecycle-hooks/spy.component';
 import { CounterParentComponent } from './ng/lifecycle-hooks/counter.component';
+import { HeroParentComponent } from './ng/component-interaction/hero.component';
+import { NameParentComponent } from './ng/component-interaction/name.component';
+import { VersionParentComponent } from './ng/component-interaction/version.component';
+import { VoteTakerComponent } from './ng/component-interaction/vote.component';
+import { CountdownLocalVarParentComponent, CountdownViewChildParentComponent } from './ng/component-interaction/countdown.component';
+import { MissionControlComponent } from './ng/component-interaction/mission.component';
+import { ComponentInteractionComponent } from './ng/component-interaction/_component-interaction.component';
+import { PopupComponent, PopupParentComponent } from './ng/pop-up/popup.component';
+import { AdBannerComponent, AdBannerParentComponent } from './ng/ads/ad-banner.component';
  
 const routes: Routes = [
   //{ path: '', redirectTo: '/ts-programming-demo', pathMatch: 'full' },
@@ -51,8 +60,18 @@ const routes: Routes = [
       { path: 'after-content', component: AfterContentParentComponent },
       { path: 'spy', component: SpyParentComponent },
       { path: 'counter', component: CounterParentComponent },
-      // { path: 'peek-a-boo', component: PeekABooComponent },
-    ]}
+    ]},
+    { path: 'component-interaction', component: ComponentInteractionComponent, children: [
+      { path: 'parent-to-child', component: HeroParentComponent },
+      { path: 'parent-to-child-setter', component: NameParentComponent },
+      { path: 'parent-to-child-on-changes', component: VersionParentComponent },
+      { path: 'child-to-parent', component:  VoteTakerComponent},
+      { path: 'parent-to-child-local-var', component: CountdownLocalVarParentComponent },
+      { path: 'parent-to-view-child', component: CountdownViewChildParentComponent },
+      { path: 'bidirectional-service', component: MissionControlComponent },
+    ]},
+    { path: 'pop-up', component: PopupParentComponent },
+    { path: 'ads', component: AdBannerParentComponent }
   ]}
 ];
  
