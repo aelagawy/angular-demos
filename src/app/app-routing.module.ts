@@ -1,3 +1,6 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { ReactiveFormComponent } from './ng/reactive-forms/reactive-form.component';
 import { CustomPipesComponent } from './ng/pipes/_custom-pipes.component';
 import { StructuralDirectiveComponent } from './ng/structural-directives/_structural-directive.component';
@@ -5,22 +8,14 @@ import { AttributeDirectiveComponent } from './ng/attribute-directives/_attribut
 import { NgComponent } from './ng/ng.component';
 import { LoopbackComponent } from './ng/little-tour.component';
 import { LittleTourComponent } from './ng/loop-back.component';
-import { 
-  KeyUpComponent_v1, 
-  KeyUpComponent_v2, 
-  KeyUpComponent_v3, 
-  KeyUpComponent_v4 
-} from './ng/key-up.component';
+import { KeyUpComponent_v1, KeyUpComponent_v2, KeyUpComponent_v3, KeyUpComponent_v4 } from './ng/key-up.component';
 import { ClickMeComponent } from './ng/click-me.component';
-import { NgModule }                   from '@angular/core';
-import { RouterModule, Routes }       from '@angular/router';
-
 import { TsProgrammingDemoComponent } from './ts-programming-demo/ts-programming-demo.component';
-import { TourOfHeroesDemoComponent }  from './tour-of-heroes/tour-of-heroes-demo/tour-of-heroes-demo.component';
-import { DashboardComponent }         from './tour-of-heroes/dashboard/dashboard.component';
-import { HeroesComponent }            from './tour-of-heroes/heroes/heroes.component';
-import { HeroDetailComponent }        from './tour-of-heroes/hero-detail/hero-detail.component';
-import { LifeCycleHooksComponent }    from './ng/lifecycle-hooks/_lifecycle-hooks.component';
+import { TourOfHeroesDemoComponent } from './tour-of-heroes/tour-of-heroes-demo/tour-of-heroes-demo.component';
+import { DashboardComponent } from './tour-of-heroes/dashboard/dashboard.component';
+import { HeroesComponent } from './tour-of-heroes/heroes/heroes.component';
+import { HeroDetailComponent } from './tour-of-heroes/hero-detail/hero-detail.component';
+import { LifeCycleHooksComponent } from './ng/lifecycle-hooks/_lifecycle-hooks.component';
 import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
 import { DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
 import { AfterViewParentComponent } from './ng/lifecycle-hooks/after-view.component';

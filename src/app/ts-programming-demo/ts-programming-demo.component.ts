@@ -609,7 +609,7 @@ switch(extraColor){
 
 
 let month = 2;
-let year = 2000;
+const year = 2000;
 let numDays = 0;
 
   switch (month) {
@@ -699,10 +699,10 @@ let numDays = 0;
 // let cc: Color = Color.Green;
 
 function isNumber(x: any): x is number {
-  return typeof x === "number";
+  return typeof x === 'number';
 }
 
-console.log("isNumber: " + isNumber("d"));
+console.log('isNumber: ' + isNumber('d'));
 
 // function isString(x: any): x is string {
 //   return typeof x === "string";
