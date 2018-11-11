@@ -1,3 +1,7 @@
+import { ReactiveFormComponent } from './ng/reactive-forms/reactive-form.component';
+import { CustomPipesComponent } from './ng/pipes/_custom-pipes.component';
+import { StructuralDirectiveComponent } from './ng/structural-directives/_structural-directive.component';
+import { AttributeDirectiveComponent } from './ng/attribute-directives/_attribute-directive.component';
 import { NgComponent } from './ng/ng.component';
 import { LoopbackComponent } from './ng/little-tour.component';
 import { LittleTourComponent } from './ng/loop-back.component';
@@ -18,7 +22,7 @@ import { HeroesComponent }            from './tour-of-heroes/heroes/heroes.compo
 import { HeroDetailComponent }        from './tour-of-heroes/hero-detail/hero-detail.component';
 import { LifeCycleHooksComponent }    from './ng/lifecycle-hooks/_lifecycle-hooks.component';
 import { PeekABooComponent } from './ng/lifecycle-hooks/peek-a-boo.component';
-import { DoCheckComponent, DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
+import { DoCheckParentComponent } from './ng/lifecycle-hooks/do-check.component';
 import { AfterViewParentComponent } from './ng/lifecycle-hooks/after-view.component';
 import { OnChangesParentComponent } from './ng/lifecycle-hooks/on-changes.component';
 import { AfterContentParentComponent } from './ng/lifecycle-hooks/after-content.component';
@@ -31,8 +35,11 @@ import { VoteTakerComponent } from './ng/component-interaction/vote.component';
 import { CountdownLocalVarParentComponent, CountdownViewChildParentComponent } from './ng/component-interaction/countdown.component';
 import { MissionControlComponent } from './ng/component-interaction/mission.component';
 import { ComponentInteractionComponent } from './ng/component-interaction/_component-interaction.component';
-import { PopupComponent, PopupParentComponent } from './ng/pop-up/popup.component';
-import { AdBannerComponent, AdBannerParentComponent } from './ng/ads/ad-banner.component';
+import { PopupParentComponent } from './ng/pop-up/popup.component';
+import { AdBannerParentComponent } from './ng/ads/ad-banner.component';
+import { TDFormComponent } from './ng/td-forms/td-form.component';
+import { FormValidationComponent } from './ng/form-validation/form-validation.component';
+import { DynamicFormsComponent } from './ng/dynamic-forms/_dynamic-form.component';
  
 const routes: Routes = [
   //{ path: '', redirectTo: '/ts-programming-demo', pathMatch: 'full' },
@@ -71,7 +78,14 @@ const routes: Routes = [
       { path: 'bidirectional-service', component: MissionControlComponent },
     ]},
     { path: 'pop-up', component: PopupParentComponent },
-    { path: 'ads', component: AdBannerParentComponent }
+    { path: 'ads', component: AdBannerParentComponent },
+    { path: 'attribute-directives', component: AttributeDirectiveComponent },
+    { path: 'structural-directives', component: StructuralDirectiveComponent },
+    { path: 'custom-pipes', component: CustomPipesComponent },
+    { path: 'reactive-forms', component: ReactiveFormComponent },
+    { path: 'td-forms', component: TDFormComponent },
+    { path: 'form-validation', component: FormValidationComponent },
+    { path: 'dynamic-forms', component: DynamicFormsComponent },
   ]}
 ];
  

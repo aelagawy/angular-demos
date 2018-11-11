@@ -1,6 +1,13 @@
+import { HeroFormComponent } from './ng/td-forms/hero-form/hero-form.component';
+import { ProfileEditorComponent } from './ng/reactive-forms/profile-editor/profile-editor.component';
+import { NameEditorComponent } from './ng/reactive-forms//name-editor/name-editor.component';
+import { ReactiveFormComponent } from './ng/reactive-forms/reactive-form.component';
+import { CustomPipesComponent } from './ng/pipes/_custom-pipes.component';
+import { pipesHeroComponents } from './ng/pipes/hero.component';
+import { heroSwitchComponents } from './ng/structural-directives/hero-switch.components';
 import { BrowserModule }                        from '@angular/platform-browser';
 import { NgModule }                             from '@angular/core';
-import { FormsModule }                          from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }                          from '@angular/forms';
 import { HttpClientModule }                     from '@angular/common/http';
 import { BrowserAnimationsModule }              from '@angular/platform-browser/animations';
 import { 
@@ -55,6 +62,23 @@ import { PopupComponent, PopupParentComponent } from './ng/pop-up/popup.componen
 import { AdBannerComponent, AdBannerParentComponent } from './ng/ads/ad-banner.component';
 import { HeroProfileComponent } from './ng/ads/hero-profile.component';
 import { HeroJobAdComponent } from './ng/ads/hero-job-ad.component';
+import { HighlightDirective } from './ng/attribute-directives/highlight.directive';
+import { AttributeDirectiveComponent } from './ng/attribute-directives/_attribute-directive.component';
+import { StructuralDirectiveComponent } from './ng/structural-directives/_structural-directive.component';
+import { UnlessDirective } from './ng/structural-directives/unless.directive';
+import { customPipes } from './ng/pipes/custom.pipe';
+import { pipesPowerBoosterComponents } from './ng/pipes/power-boost.component';
+import { pipesFlyingHeroesComponents } from './ng/pipes/flying-heroes.component';
+import { TDFormComponent } from './ng/td-forms/td-form.component';
+import { FormValidationComponent } from './ng/form-validation/form-validation.component';
+import { HeroReactiveFormComponent } from './ng/form-validation/reactive/hero-reactive-form.component';
+import { HeroTDFormComponent } from './ng/form-validation/td-forms/hero-td-form.component';
+import { UniqueAlterEgoValidatorDirective } from './ng/form-validation/shared/alter-ego.directive';
+import { ForbiddenValidatorDirective } from './ng/form-validation/shared/forbidden-name.directive';
+import { IdentityRevealedValidatorDirective } from './ng/form-validation/shared/identity-revealed.directive';
+import { DynamicFormsComponent } from './ng/dynamic-forms/_dynamic-form.component';
+import { DynamicFormQuestionComponent } from './ng/dynamic-forms/dynamic-form-question.component';
+import { DynamicFormComponent } from './ng/dynamic-forms/dynamic-form.component';
   
   @NgModule({
   declarations: [
@@ -100,8 +124,14 @@ import { HeroJobAdComponent } from './ng/ads/hero-job-ad.component';
     VoteTakerComponent, VoterComponent,
     PopupComponent, PopupParentComponent,
     AdBannerParentComponent, AdBannerComponent,
-    HeroProfileComponent,
-    HeroJobAdComponent
+    HeroProfileComponent, HeroJobAdComponent,
+    AttributeDirectiveComponent, HighlightDirective,
+    StructuralDirectiveComponent, heroSwitchComponents, UnlessDirective,
+    customPipes, pipesPowerBoosterComponents, pipesHeroComponents, CustomPipesComponent, pipesFlyingHeroesComponents,
+    ReactiveFormComponent, NameEditorComponent, ProfileEditorComponent,
+    TDFormComponent, HeroFormComponent,
+    FormValidationComponent, HeroReactiveFormComponent, HeroTDFormComponent, UniqueAlterEgoValidatorDirective, ForbiddenValidatorDirective, IdentityRevealedValidatorDirective,
+    DynamicFormsComponent, DynamicFormQuestionComponent, DynamicFormComponent
   ],
   entryComponents:[
     PopupComponent,
@@ -110,7 +140,7 @@ import { HeroJobAdComponent } from './ng/ads/hero-job-ad.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
