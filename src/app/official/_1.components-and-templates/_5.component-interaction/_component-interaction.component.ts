@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-component-interaction',
-    templateUrl: './_component-interaction.component.html'
+    template: `
+    <h1 id="top">Component Communication Cookbook</h1>
+    <router-outlet></router-outlet>
+`
 })
 export class ComponentInteractionComponent{
-    
 }

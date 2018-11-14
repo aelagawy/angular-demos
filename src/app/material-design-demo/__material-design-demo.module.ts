@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule, MatTabsModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule, MatTabsModule, MatButtonToggleModule, MatTreeModule, MatTreeNode } from '@angular/material';
 
 import { MaterialDesignDemoComponent } from './material-design-demo.component';
 
@@ -14,7 +14,10 @@ import { MaterialDesignDemoComponent } from './material-design-demo.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonToggleModule,
+    MatTreeModule
+  
   ],
   declarations: [
     MaterialDesignDemoComponent
@@ -27,7 +30,9 @@ import { MaterialDesignDemoComponent } from './material-design-demo.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonToggleModule,
+    MatTreeModule
   ]
 })
 export class __MaterialDesignDemoModule { }

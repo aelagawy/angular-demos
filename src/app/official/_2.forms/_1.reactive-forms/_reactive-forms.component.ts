@@ -8,8 +8,8 @@ export type EditorType = 'name' | 'profile';
   <h1>Reactive Forms</h1>
 
 <nav>
-  <a class="btn btn-primary" (click)="toggleEditor('name')">Name Editor</a> | 
-  <a class="btn btn-primary" (click)="toggleEditor('profile')">Profile Editor</a>
+  <a class="btn" (click)="toggleEditor('name')">Name Editor</a> | 
+  <a class="btn" (click)="toggleEditor('profile')">Profile Editor</a>
 </nav>
 
 <app-name-editor *ngIf="showNameEditor"></app-name-editor>

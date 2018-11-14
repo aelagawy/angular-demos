@@ -1,3 +1,7 @@
+import { TDFormsComponent } from './official/_2.forms/_2.td-forms/_td-forms.component';
+import { ReactiveFormsComponent } from './official/_2.forms/_1.reactive-forms/_reactive-forms.component';
+import { CustomPipesComponent } from './official/_1.components-and-templates/_11.pipes/_custom-pipes.component';
+import { AngularElementsComponent } from './official/_1.components-and-templates/_7.angular-elements/_angular-elements.component';
 import { ComponentStylesComponent } from './official/_1.components-and-templates/_6.component-styles/_component-styles.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,12 +13,10 @@ import { HeroesComponent } from './tour-of-heroes/heroes/heroes.component';
 import { HeroDetailComponent } from './tour-of-heroes/hero-detail/hero-detail.component';
 import { DisplayingDataComponent } from './official/_1.components-and-templates/_1.displaying-data/_displaying-data.component';
 import { TemplateSyntaxComponent } from './official/_1.components-and-templates/_2.template-syntax/_template-syntax.component';
-import { UserInputComponent } from './official/_1.components-and-templates/_3.user-input/_user-input.component';
 import { ClickMeComponent } from './official/_1.components-and-templates/_3.user-input/click-me.component';
 import { KeyUpComponent_v1, KeyUpComponent_v2, KeyUpComponent_v3, KeyUpComponent_v4 } from './official/_1.components-and-templates/_3.user-input/key-up.component';
 import { LittleTourComponent } from './official/_1.components-and-templates/_3.user-input/loop-back.component';
 import { LoopbackComponent } from './official/_1.components-and-templates/_3.user-input/little-tour.component';
-import { LifeCycleHooksComponent } from './official/_1.components-and-templates/_4.lifecycle-hooks/_lifecycle-hooks.component';
 import { PeekABooComponent } from './official/_1.components-and-templates/_4.lifecycle-hooks/peek-a-boo.component';
 import { DoCheckParentComponent } from './official/_1.components-and-templates/_4.lifecycle-hooks/do-check.component';
 import { OnChangesParentComponent } from './official/_1.components-and-templates/_4.lifecycle-hooks/on-changes.component';
@@ -39,19 +41,17 @@ import { OfficialDemosComponent } from './official/_official-demos.component';
 
  
 const routes: Routes = [
-  //{ path: '', redirectTo: '/ts-programming-demo', pathMatch: 'full' },
-
-  { path: 'ts-programming-demo', component: TsProgrammingDemoComponent },
-  { path: 'tour-of-heroes-demo', component: TourOfHeroesDemoComponent ,children: [
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'heroes', component: HeroesComponent }
-  ]},
-  { path: 'official', component: OfficialDemosComponent ,children: [
-    { path: '_1.displaying-data', component: DisplayingDataComponent },
-    { path: '_2.template-syntax', component: TemplateSyntaxComponent },
-    { path: '_3.user-input', component: UserInputComponent, children: [
+  { path: 'ts-programming-demo', component: TsProgrammingDemoComponent, data: { name: 'TS Programming Demo'} },
+  { path: 'official', component: OfficialDemosComponent, children: [
+    { path: 'tour-of-heroes', component: TourOfHeroesDemoComponent ,children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'detail/:id', component: HeroDetailComponent },
+      { path: 'heroes', component: HeroesComponent }
+    ]},
+    { path: 'displaying-data', component: DisplayingDataComponent },
+    { path: 'template-syntax', component: TemplateSyntaxComponent },
+    { path: 'user-input', children: [
       { path: 'click-me', component: ClickMeComponent },
       { path: 'key-up-1', component: KeyUpComponent_v1 },
       { path: 'key-up-2', component: KeyUpComponent_v2 },
@@ -59,7 +59,7 @@ const routes: Routes = [
       { path: 'key-up-4', component: KeyUpComponent_v4 },
       { path: 'little-tour', component: LittleTourComponent },
       { path: 'loop-back', component: LoopbackComponent }]},
-    { path: '_4.lifecycle-hooks', component: LifeCycleHooksComponent, children: [
+    { path: 'lifecycle-hooks', children: [
       { path: 'peek-a-boo', component: PeekABooComponent },
       { path: 'do-check', component: DoCheckParentComponent },
       { path: 'on-changes', component: OnChangesParentComponent },
@@ -67,7 +67,7 @@ const routes: Routes = [
       { path: 'after-content', component: AfterContentParentComponent },
       { path: 'spy', component: SpyParentComponent },
       { path: 'counter', component: CounterParentComponent }]},
-    { path: '_5.component-interaction', component: ComponentInteractionComponent, children: [
+    { path: 'component-interaction', component: ComponentInteractionComponent, children: [
       { path: 'parent-to-child', component: HeroParentComponent },
       { path: 'parent-to-child-setter', component: NameParentComponent },
       { path: 'parent-to-child-on-changes', component: VersionParentComponent },
@@ -75,11 +75,14 @@ const routes: Routes = [
       { path: 'parent-to-child-local-var', component: CountdownLocalVarParentComponent },
       { path: 'parent-to-view-child', component: CountdownViewChildParentComponent },
       { path: 'bidirectional-service', component: MissionControlComponent }]},
-    { path: '_6.component-styles', component: ComponentStylesComponent },    
-    //{ path: 'pop-up', component: PopupParentComponent },
-    //{ path: 'ads', component: AdBannerParentComponent },
+    { path: 'component-styles', component: ComponentStylesComponent },    
+    { path: 'angular-elements', component: AngularElementsComponent },
     { path: 'attribute-directives', component: AttributeDirectiveComponent },
     { path: 'structural-directives', component: StructuralDirectiveComponent },
+    { path: 'pipes', component: CustomPipesComponent },
+
+    { path: 'reactive-forms', component: ReactiveFormsComponent },
+    { path: 'td-forms', component: TDFormsComponent },
     { path: 'form-validation', component: FormValidationComponent },
     { path: 'dynamic-forms', component: DynamicFormsComponent },
   ]}

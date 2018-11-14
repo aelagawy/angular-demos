@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AngularElementsComponent } from './_angular-elements.component';
-//import { PopupParentComponent, PopupComponent } from './popup.component';
+import { PopupComponent, PopupParentComponent } from './popup.component';
 
 @NgModule({
   imports: [
@@ -11,7 +11,10 @@ import { AngularElementsComponent } from './_angular-elements.component';
   declarations: [
     AngularElementsComponent,
   //  PopupComponent,
- //   PopupParentComponent
+  //  PopupParentComponent
+  ],
+  entryComponents:[
+  //  PopupComponent
   ]
 })
 export class __AngularElementsModule { }

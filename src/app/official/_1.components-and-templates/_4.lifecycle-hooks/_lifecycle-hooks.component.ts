@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+
 @Component({
-  selector: 'lifecycle-hooks-root',
-  templateUrl: './_lifecycle-hooks.component.html'
+  template: `
+  <h1>Component Lifecycle Hooks</h1>
+  <router-outlet></router-outlet>
+  `
 })
 export class LifeCycleHooksComponent { }

@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, Output, Injector } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Injector, forwardRef } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { createCustomElement } from '@angular/elements';
-
 import { PopupService } from './popup.service';
+
 
 @Component({
   selector: 'app-popup',
@@ -64,7 +64,8 @@ export class PopupComponent {
     <input #input value="Message">
     <button (click)="popup.showAsComponent(input.value)">Show as component</button>
     <button (click)="popup.showAsElement(input.value)">Show as element</button>
-  `
+  `,
+  providers: [forwardRef(() => PopupService)]
 })
 export class PopupParentComponent{
   constructor(injector: Injector, public popup: PopupService) {

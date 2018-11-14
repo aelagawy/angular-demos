@@ -7,10 +7,13 @@ import { UniqueAlterEgoValidatorDirective } from './shared/alter-ego.directive';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
 import { HeroTDFormComponent } from './td-forms/hero-td-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     FormValidationComponent,

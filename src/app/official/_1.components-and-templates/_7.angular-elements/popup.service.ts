@@ -4,7 +4,7 @@ import { NgElement, WithProperties } from '@angular/elements';
 import { PopupComponent } from './popup.component';
 
 
-@Injectable({providedIn: 'root'})
+@Injectable()
 export class PopupService {
   constructor(private injector: Injector,
               private applicationRef: ApplicationRef,

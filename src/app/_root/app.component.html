@@ -1,28 +1,14 @@
-<!-- 
-<router-outlet></router-outlet>
-
-<app-material-design-demo></app-material-design-demo> -->
 
 <mat-toolbar color="primary">
-   
   <mat-toolbar-row>
-      <!-- <button class="hamburger mat-button" mat-button (click)="sidenav.toggle()" title="Docs menu" >
-      <span class="mat-button-wrapper">
-        <mat-icon class="mat-icon" role="img" svgicon="menu" aria-hidden="true">
-          <svg focusable="false" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
-            </path>
-          </svg>
-        </mat-icon>
-      </span>
-      <div class="mat-button-ripple mat-ripple" matripple=""></div>
-      <div class="mat-button-focus-overlay"></div>
-      </button> -->
-    <span>Angular Demos</span>
-  
+    <span>Angular Demos | </span>
+    <!-- <div class="example-button-row">
+        <button [routerLink]="['/official', {outlets: {'sidebar': ['displaying-data'], 'primary': ['template-syntax']}}]" mat-button>Official1</button>
+        <button [routerLink]="[{outlets: {'sidebar': ['official'], 'main': ['official', 'template-syntax']}}]" mat-button>Official2</button>
+        <button routerLink="tour-of-heroes" mat-button>Tour of Heroes</button>
+    </div> -->
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
-  
     <span>by Ahmad El-Agawy</span>
     <a class="docs-button docs-navbar-hide-small mat-button" href="https://github.com/aelagawy/angular-demos" mat-button target="_blank">
       <span class="mat-button-wrapper">
@@ -32,63 +18,63 @@
     </a>
   </mat-toolbar-row>
 </mat-toolbar>
-
-<!-- <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="push" class="col-2">
-      <mat-list>
-          <a mat-list-item routerLink="/ng/click-me">Click Me !</a>
-          <a mat-list-item routerLink="/ng/key-up-1">Key Up 1</a>
-          <a mat-list-item routerLink="/ng/key-up-2">Key Up 2</a>
-          <a mat-list-item routerLink="/ng/key-up-3">Key Up 3</a>
-          <a mat-list-item routerLink="/ng/key-up-4">Key Up 4</a>
-          <a mat-list-item routerLink="/ng/little-tour">Little Tour</a>
-          <a mat-list-item routerLink="/ng/loop-back">loop-back</a>
-      </mat-list>
-  </mat-sidenav>
-
-
-  <mat-sidenav-content>
-          <router-outlet></router-outlet>
-
-  </mat-sidenav-content>
-
-</mat-sidenav-container> -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3 col">
+    <div class="col-2 col">
       <ul>
-          <li><a routerLink="/official/_1.displaying-data">_1.displaying-data</a></li>
-          <li><a routerLink="/official/_2.template-syntax">_2.template-syntax</a></li>
-          <li><a routerLink="/official/_3.user-input">_3.user-input</a></li>
-          <li><a routerLink="/official/_4.lifecycle-hooks">_4.lifecycle-hooks</a></li>
-          <li><a routerLink="/official/_5.component-interaction">_5.component-interaction</a></li>
-          <li><a routerLink="/official/_6.component-styles">_6.component-styles</a></li>
-          <li><a routerLink="/official/loop-back">loop-back</a></li>
-          <li><a routerLink="/official/lifecycle-hooks">lifecycle-hooks</a></li>
-          <li><a routerLink="/official/component-interaction">component-interaction</a></li>
-          <li><a routerLink="/official/pop-up">pop-up</a></li>
-          <li><a routerLink="/official/ads">ads</a></li>
-          <li><a routerLink="/official/attribute-directives">attribute-directives</a></li>
-          <li><a routerLink="/official/structural-directives">structural-directives</a></li>
-          <li><a routerLink="/official/custom-pipes">custom-pipes</a></li>
-          <li><a routerLink="/official/reactive-forms">reactive-forms</a></li>
-          <li><a routerLink="/official/td-forms">td-forms</a></li>
-          <li><a routerLink="/official/form-validation">form-validation</a></li>
-          <li><a routerLink="/official/dynamic-forms">dynamic-forms</a></li>
-        </ul>          
+          <li><a routerLink="/ts-programming-demo">TS Demo</a></li>
+          <li><a href="#">Official</a></li>
+          <ul>
+            <li><a routerLink="/official/tour-of-heroes">Tour of Heroes</a></li>
+            <li><a routerLink="/official/displaying-data">Displaying Data</a></li>
+            <li><a routerLink="/official/template-syntax">Template Syntax</a></li>
+            <li><a routerLink="/official/user-input">User Input</a></li>
+            <ul>
+              <li><a routerLink="/official/user-input/click-me">Click Me</a></li>
+              <li><a routerLink="/official/user-input/key-up-1">Key Up 1</a></li>
+              <li><a routerLink="/official/user-input/key-up-2">Key Up 2</a></li>
+              <li><a routerLink="/official/user-input/key-up-3">Key Up 3</a></li>
+              <li><a routerLink="/official/user-input/key-up-4">Key Up 4</a></li>
+              <li><a routerLink="/official/user-input/little-tour">Little Tour</a></li>
+              <li><a routerLink="/official/user-input/loop-back">Loop Back</a></li>
+            </ul>
+            <li><a routerLink="/official/lifecycle-hooks">Lifecycle Hooks</a></li>
+            <ul>
+                <li><a routerLink="/official/lifecycle-hooks/peek-a-boo">Peek-a-boo: (most) lifecycle hooks</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/do-check">OnChanges</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/on-changes">DoCheck</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/after-view">AfterViewInit & AfterViewChecked</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/after-content">AfterContentInit & AfterContentChecked</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/spy">Spy: directive with OnInit & OnDestroy</a></li>
+                <li><a routerLink="/official/lifecycle-hooks/counter">Counter: OnChanges + Spy directive</a></li>
+            </ul>
+            <li><a routerLink="/official/component-interaction">Component Interaction</a></li>
+            <ul>
+                <li><a routerLink="/official/component-interaction/parent-to-child">Pass data from parent to child with input binding ("Heroes")</a></li>
+                <li><a routerLink="/official/component-interaction/parent-to-child-setter">Intercept input property changes with a setter ("Master")</a></li>
+                <li><a routerLink="/official/component-interaction/parent-to-child-on-changes">Intercept input property changes with <i>ngOnChanges</i> ("Source code version")</a></li>
+                <li><a routerLink="/official/component-interaction/child-to-parent">Parent listens for child event ("Colonize Universe")</a></li>
+                <li><a routerLink="/official/component-interaction/parent-to-child-local-var">Parent to child via <i>local variable</i>("Countdown to Liftoff")</a></li>
+                <li><a routerLink="/official/component-interaction/parent-to-view-child">Parent calls <i>ViewChild</i>("Countdown  to Liftoff")</a></li>
+                <li><a routerLink="/official/component-interaction/bidirectional-service">Parent and children communicate via a service ("Mission Control")</a></li>
+            </ul>
+            <li><a routerLink="/official/component-styles">Component Styles</a></li>
+            <li><a routerLink="/official/angular-elements">Angular Elements</a></li>
+            <li><a routerLink="/official/attribute-directives">Attribute Directives</a></li>
+            <li><a routerLink="/official/structural-directives">Structural Directives</a></li>
+            <li><a routerLink="/official/pipes">Custom Pipes</a></li>
+            <li><a routerLink="/official/reactive-forms">Reactive Forms</a></li>
+            <li><a routerLink="/official/td-forms">TD Forms</a></li>
+            <li><a routerLink="/official/form-validation">Form Validation</a></li>
+            <li><a routerLink="/official/dynamic-forms">Dynamic Forms</a></li>
+          </ul>
+          <li></li>
+      </ul>
     </div>
-    <div class="col-9 col">
+    <div class="col-10 col">
       <div class="container">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-

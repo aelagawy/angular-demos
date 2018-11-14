@@ -1,4 +1,4 @@
-import { heroSwitchComponents } from './official/_1.components-and-templates/_2.template-syntax/hero-switch.components';
+//import { heroSwitchComponents } from './official/_1.components-and-templates/_2.template-syntax/hero-switch.components';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -48,7 +48,7 @@ import { OfficialDemosComponent } from './official/_official-demos.component';
     DashboardComponent,
     HeroSearchComponent,
     TourOfHeroesDemoComponent,
-    heroSwitchComponents
+   // heroSwitchComponents
   ],
   entryComponents:[
     // PopupComponent,
